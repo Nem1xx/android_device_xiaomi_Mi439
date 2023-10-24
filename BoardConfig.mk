@@ -11,9 +11,9 @@ ifeq ($(TARGET_KERNEL_VERSION),4.9)
         ifneq ($(wildcard $(TARGET_KERNEL_SOURCE)/arch/arm64/configs/lineageos_mi439_defconfig),)
             $(warning Using official lineageos kernel)
             TARGET_KERNEL_CONFIG := lineageos_mi439_defconfig
-        else ifneq ($(wildcard $(TARGET_KERNEL_SOURCE)/arch/arm64/configs/mi439-perf_defconfig),)
-            $(warning Using mi-sdm439 kernel)
-            TARGET_KERNEL_CONFIG := mi439-perf_defconfig
+        else ifneq ($(wildcard $(TARGET_KERNEL_SOURCE)/arch/arm64/configs/sdm439-perf_defconfig),)
+            $(warning Using sdm439 kernel)
+            TARGET_KERNEL_CONFIG := sdm439-perf_defconfig
         else
             $(warning Fallback to use Mi-Thorium kernel)
             TARGET_USES_MITHORIUM_KERNEL := true
